@@ -12,3 +12,90 @@
     --color-offgrey5: #00000040;
     --color-grey6: #D1D1D1;
 }
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    color: var(--color-white);
+    font-family: "Nunito Sans", sans-serif;
+}
+
+span {
+    color: var(--color-red);
+    font-weight: 800;
+
+}
+
+header {
+    width: 1366px;
+    height: 807px;
+    background-image: url("../Assets/Image.png");
+    background-size: contain;
+    background-position: top;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav {
+    height: 90px;
+    position: sticky;
+    align-self: stretch;
+    top: 0;
+    background-color: var(--color-offgrey3);
+    text-transform: uppercase;
+
+    display: flex;
+    justify-content: space-around;
+}
+
+img[alt="Icon"] {
+    height: 35px;
+}
+
+div.logo-main{
+    font-weight: 700;
+    font-size: 35px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.navigation {
+    width: 486px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+.navigation > div {
+    flex-grow: 1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navigation > div:hover {
+    background-color: var(--color-offwhite1);
+}
+
+div.banner-content {
+
+}
+
+img[alt="Icon Arrow Down"] {
+    box-sizing: border-box;
+    height: 55px;
+    width: 55px;
+    padding: 19px;
+    background-color: var(--color-red);
+    border-radius: 30px;
+}
