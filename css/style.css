@@ -23,17 +23,25 @@ body {
     font-family: "Nunito Sans", sans-serif;
 }
 
+h1 {
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 90px;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
 span {
     color: var(--color-red);
     font-weight: 800;
-
 }
 
 header {
-    width: 1366px;
+    position: relative;
+    width: 100vw;
     height: 807px;
     background-image: url("../Assets/Image.png");
-    background-size: contain;
+    background-size: cover;
+    background-repeat: no-repeat;
     background-position: top;
 
     display: flex;
@@ -42,13 +50,22 @@ header {
     align-items: center;
 }
 
+header::before {
+    content: "";
+    width: 100vw;
+    height: 807px;
+    background-color: var(--color-offgrey5);
+    position: absolute;
+}
+
 nav {
     height: 90px;
     position: sticky;
+    justify-self: flex-start;
     align-self: stretch;
-    top: 0;
     background-color: var(--color-offgrey3);
     text-transform: uppercase;
+    border-bottom: 2px solid var(--color-offwhite1);
 
     display: flex;
     justify-content: space-around;
@@ -58,9 +75,10 @@ img[alt="Icon"] {
     height: 35px;
 }
 
-div.logo-main{
+div.logo-main {
     font-weight: 700;
     font-size: 35px;
+    gap: 5px;
 
     display: flex;
     justify-content: center;
@@ -75,7 +93,9 @@ div.navigation {
     align-items: stretch;
 }
 
-.navigation > div {
+.navigation > a {
+    text-decoration: none;
+    color: inherit;
     flex-grow: 1;
 
     display: flex;
@@ -83,19 +103,67 @@ div.navigation {
     align-items: center;
 }
 
-.navigation > div:hover {
+.navigation > a:hover {
     background-color: var(--color-offwhite1);
 }
 
 div.banner-content {
+    justify-self: center;
+    position: relative;
+    width: 1046px;
+    height: 297px;
 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.banner-content p {
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: 700;
+}
+
+.button-container {
+    width: 471px;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.button {
+    padding: 22px 55px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.button-primary {
+    background-color: var(--color-red);
+    color: var(--color-white);
+    box-shadow: 0 3px 6px var(--color-red);
+}
+
+.button-secondary {
+    background-color: var(--color-white);
+    color: var(--color-red);
+}
+
+.dirty {
+    width: 100vw;
+    height: 90px;
 }
 
 img[alt="Icon Arrow Down"] {
+    position: absolute;
+    bottom: -27px;
     box-sizing: border-box;
     height: 55px;
     width: 55px;
-    padding: 19px;
+    padding: 17px;
     background-color: var(--color-red);
     border-radius: 30px;
 }
